@@ -102,60 +102,60 @@ export const subjects: Subject[] = [
             "title": "Grafický design",
             "description": "**Grafický design** je způsob vizuální komunikace sloužící k oslovení lidí. Najdeme ho všude, kde působí člověk – od obalů produktů přes webové str...",
             "content": "# 📐 Grafický design\n\n> [ABSTRACT] Stručný přehled\n> **Grafický design** je způsob vizuální komunikace sloužící k oslovení lidí. Najdeme ho všude, kde působí člověk – od obalů produktů přes webové stránky až po značení v prostoru.\n\n---\n\n## 🧱 Základní prvky grafického designu\n\n### Čára\n- Nejjednodušší prvek vymezený dvěma body.\n- Může být tenká, tlustá, vlnkovitá nebo zubatá.\n\n### Tvar\n- Jakákoliv oblast s rozpoznatelnými hranami.\n- **Geometrické:** Čtverce, kruhy, trojúhelníky (běžné tvary).\n- **Organické:** Volnější, přírodní formy.\n- Tvary jsou klíčovou součástí vizuální komunikace (např. dopravní značky).\n\n### Textura\n- Povrchová vlastnost objektu (vizuální nebo hmatová).\n- Pomáhá vytvářet dojem hloubky a realismu.\n\n---\n\n## 👁️ Vizuální gramotnost\nSchopnost interpretovat a vytvářet vizuální zprávy. Grafik musí rozumět tomu, jak lidé vnímají tvary a symboly (např. rozpoznávání dopravních značek nebo symbolů).\n\n---\n## 🔗 Související témata\n- [[04 Design dokumentů|📐 Design dokumentů (1. ročník)]]\n- [[Pojmy|🎨 Typografické pojmy]]\n- [[Domů|Zpět na hlavní přehled]]",
-            "audioUrl": "PLACEHOLDER-graficky-design-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-graficky-design-kviz",
-            "flashcardsUrl": "PLACEHOLDER-graficky-design-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           },
           {
             "id": "natisk-a-nahled",
             "title": "Nátisk a náhled",
             "description": "Nátisk a náhled jsou kontrolní procesy v závěrečné fázi předtiskové přípravy. Slouží k odhalení chyb v obsahu, rozměrech a barevnosti ještě před zh...",
             "content": "# 🖨️ Nátisk a náhled\n\n> [ABSTRACT] Stručný přehled\n> Nátisk a náhled jsou kontrolní procesy v závěrečné fázi předtiskové přípravy. Slouží k odhalení chyb v obsahu, rozměrech a barevnosti ještě před zhotovením tiskové formy.\n\n---\n\n## 🎯 Účel nátisku\n- **Odhalení chyb při vyřazení:** Kontrola rozměrů a správného umístění ořezových značek.\n- **Korektura:** Kontrola gramatických a obsahových chyb (data, jména, místa).\n- **Kontrola barevnosti:** Ověření věrnosti barev před nákladovým tiskem.\n\n---\n\n## 📂 Typy nátisku\n\n### Digitální nátisk\n- Provádí se na profesionálních digitálních tiskárnách se specializovaným softwarem.\n- Velkoformátové tiskárny jsou vhodné pro kontrolu archové montáže.\n- Dnes jedna z nejpoužívanějších variant.\n\n### Certifikovaný nátisk\n- Nátisk s ověřenou a garantovanou přesností barevnosti.\n- Odchylka se musí pohybovat v rámci stanovené normy **ISO**.\n- K měření slouží kontrolní proužky a v Evropě nejčastěji profil **FOGRA**.\n\n### Fotochemický nátisk\n- Využíval produkční kopírovací podklady, laminování světlocitlivou fólií a speciální tonery.\n- Dnes je na ústupu kvůli digitalizaci tiskových dat.\n\n### Nátiskový stroj\n- Zjednodušená jednotka pro ruční tisk několika kusů.\n- Používá stejnou tiskovou formu jako produkční stroj, což zaručuje věrnost rastru, ale barevnost nemusí být 100%.\n\n---\n\n## 🖥️ Náhled\nNáhled slouží k vizuální kontrole na monitoru bez fyzického tisku.\n- **Požadavek:** Kvalitní, pravidelně kalibrovaný monitor.\n- **Využití:** Hlavně kontrola obsahových chyb.\n- **Omezení:** Je nutné počítat s rozdíly v barevnosti oproti finálnímu tisku.\n\n---\n## 🔗 Související témata\n- [[02 Organizace polygrafické výroby|🖨️ Organizace výroby]]\n- [[06 Technologická příprava zakázky|📁 Příprava zakázky]]\n- [[Domů|Zpět na hlavní přehled]]",
-            "audioUrl": "PLACEHOLDER-natisk-a-nahled-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-natisk-a-nahled-kviz",
-            "flashcardsUrl": "PLACEHOLDER-natisk-a-nahled-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           },
           {
             "id": "sazba-knihy",
             "title": "Sazba knihy",
             "description": "Sazba knihy vyžaduje precizní práci s textem, obrazem a geometrií stránky. Klíčem je jednoduchá struktura dokumentu, správné formátování pomocí sty...",
             "content": "# 📖 Sazba knihy\n\n> [ABSTRACT] Stručný přehled\n> Sazba knihy vyžaduje precizní práci s textem, obrazem a geometrií stránky. Klíčem je jednoduchá struktura dokumentu, správné formátování pomocí stylů a volba vhodné knižní vazby.\n\n---\n\n## ⚙️ Technické základy sazby\n- **Práce s rámečky:** Stránková montáž (např. v InDesignu) využívá řetězené rámečky pro přetékání textu a vrstvy pro lepší organizaci.\n- **Vazby na soubory:** Importované obrázky jsou linkované; při přesunu originálu je nutná aktualizace vazby.\n\n---\n\n## 📝 Příprava a formátování textu\n- **Korektura:** Text musí projít revizí gramatiky, pravopisu a stylistiky.\n- **Styly:** Nezbytné je používat **odstavcové a znakové styly** pro nadpisy, podnadpisy a hlavní text.\n- **Písmo:** Pro čitelnost se preferují patková písma. Velikost 12–14 b. pro děti, 8–11 b. pro dospělé.\n\n---\n\n## 📐 [[Sazba knihy#📐 Zrcadlo sazby (Geometrie stránky)|Zrcadlo sazby]] (Geometrie stránky)\n- **Formát:** Nastavujeme čistý formát tiskoviny a protilehlé stránky (dvoustránky).\n- **Okraje:** Definují sazební obrazec (prostor pro text) a ochrannou zónu.\n- **[[05 Formáty papíru#✂️ Impozice (Vyřazování)|Spadávka]]:** 2–5 mm pro bezokrajové prvky.\n\n---\n\n## 🏛️ Části knihy\n- **Obálka a přebal:** Ochrana a vizuální upoutávka.\n- **Předsádka:** Spojuje knižní blok s deskami (pravá = bílá, nepravá = 1. strana bloku).\n- **Patitul:** Název a autor (před titulním listem).\n- **Hlavní titul:** Autor, dílo, rok vydání, ilustrace.\n- **Vydavatelský záznam (anotace):** Tiráž, copyright, spolupracovníci (překladatel, grafik).\n- **Textová část:** Jednotné názvy kapitol, začátky kapitol na nové stránce.\n\n---\n\n## 🛠️ Knižní vazby\n\n### Měkké vazby\n- **[[Sazba knihy#Měkké vazby|V1]] (sešitová):** Dvoustránky spojené sponkami (počet stran dělitelný 4).\n- **[[Sazba knihy#Měkké vazby|V2]] (lepená):** Listy vlepované do měkkých desek (učebnice, levné knihy).\n\n### Tuhé vazby\n- **V7:** Sešité složky, obálka potažená papírem, hřbet plátnem.\n- **[[Sazba knihy#Tuhé vazby|V8]]:** Kvalitní vazba, šitý blok, desky s laminací nebo kůží.\n\n---\n## 🔗 Související témata\n- [[Typografie|🎨 Typografie]]\n- [[Základní pravidla sazby|📏 Základní pravidla sazby]]\n- [[Výroba papíru|📜 Výroba papíru]]\n- [[Domů|Zpět na hlavní přehled]]",
-            "audioUrl": "PLACEHOLDER-sazba-knihy-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-sazba-knihy-kviz",
-            "flashcardsUrl": "PLACEHOLDER-sazba-knihy-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           },
           {
             "id": "typografie",
             "title": "Typografie",
             "description": "Typografie zajišťuje dobrou čitelnost, orientaci a estetiku tiskoviny. Dodržování typografických pravidel je nezbytné pro profesionální výstup.",
             "content": "# 🎨 Typografie tiskovin\n\n> [ABSTRACT] Stručný přehled\n> Typografie zajišťuje dobrou čitelnost, orientaci a estetiku tiskoviny. Dodržování typografických pravidel je nezbytné pro profesionální výstup.\n\n---\n\n## 📏 Základní pojmy\n- **[[Typografie#📏 Základní pojmy|Čtverčík]] (EM):** Čtverec o hraně velikosti písma. Základní horizontální i vertikální míra.\n- **Půlčtverčík (EN):** Polovina čtverčíku.\n- **Využití:** Odsazení prvního řádku odstavce, mezery za odstavcem, mezislovní mezery (základ 1/3 EM).\n\n---\n\n## 📂 Druhy písma\n- **Patkové (Serif):** Krátké čárky (patky) na účaří usnadňují čtení dlouhých textů (knihy, noviny). Př: *Times New Roman*.\n- **Bezpatkové (Sans Serif):** Moderní, vhodné pro digitální grafiku, weby a krátké texty. Př: *Arial, Roboto*.\n- **Estetická písma:** Ručně psaná, zdobená; pro vizuální efekt.\n\n---\n\n## ⚙️ Pravidla sazby a odstavců\n\n### Typy sazby\n- **Hladká sazba:** Jednotná velikost a řez písma v celém textu.\n- **Pořadová sazba:** Uspořádání do seznamů (arabské/římské číslice, odrážky).\n\n### Úprava odstavců\n- **Zarovnání na praporek:** Jedna strana zarovnaná (vlevo/vpravo/na střed). Vhodné pro letáky a články.\n- **Zarovnání do bloku:** Obě strany zarovnané. Využívá proměnlivé mezery, vhodné pro knihy a časopisy.\n- **Oddělení:** Odsazení prvního řádku nebo mezera za odstavcem.\n\n---\n\n## 🖋️ Klíčová typografická pravidla\n\n### Interpunkce\n- Tečka, čárka, otazník: hned za slovo, následuje mezera.\n- **Výjimky:** Čas (10:45), sportovní výsledky (2:0), desetinná čárka (0,5).\n\n### Mezery a spojky\n- **Pevná mezera:** Jednohláskové předložky a spojky (v, s, z, u, o, k, i, a) nesmí zůstat na konci řádku.\n- **Telefonní čísla:** Mezery po třech číslicích (+420 777 888 555).\n- **Datum:** Mezery v českém formátu (3. 2. 2025). Mezinárodní bez mezer (2025-02-03).\n\n### Znaménka\n- **Spojovník (-):** Bez mezer (česko-anglický, modro-zelený).\n- **Pomlčka (–):** S mezerami pro oddělení věty.\n- **Závorky:** Bez mezer uvnitř (text v závorce).\n- **Zkratky:** Bez mezer (tj., atd., aj.).\n\n### Dělení slov\n- Rozdělování podle slabik pomocí spojovníku. Na konci řádku musí zůstat minimálně 3 znaky.\n\n---\n## 🔗 Související témata\n- [[Pojmy|🎨 Typografické pojmy (3. ročník)]]\n- [[Základní pravidla sazby|📏 Základní pravidla sazby]]\n- [[Sazba knihy|📖 Sazba knihy]]\n- [[Domů|Zpět na hlavní přehled]]",
-            "audioUrl": "PLACEHOLDER-typografie-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-typografie-kviz",
-            "flashcardsUrl": "PLACEHOLDER-typografie-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           },
           {
             "id": "zakladni-pravidla-sazby",
             "title": "Základní pravidla sazby",
             "description": "Sazba a zlom dokumentu se řídí pravidly, která zajišťují technickou správnost a estetiku tiskoviny. Práce probíhá v rámečcích a vrstvách s důrazem ...",
             "content": "# 📏 Základní pravidla sazby\n\n> [ABSTRACT] Stručný přehled\n> Sazba a zlom dokumentu se řídí pravidly, která zajišťují technickou správnost a estetiku tiskoviny. Práce probíhá v rámečcích a vrstvách s důrazem na správný import grafiky a geometrii stránky.\n\n---\n\n## ⌨️ Typy a jednotky sazby\n- **Hladká sazba:** Sazba textu v jedné velikosti a řezu, uspořádaná do odstavců s pravidelným prokladem.\n- **[[Typografie#📏 Základní pojmy|Čtverčík]] (EM):** Základní jednotka sazby (hrana čtverce = velikost písma).\n  - Mezislovní mezera: cca 1/3 EM.\n  - Proklad: např. 1,2x až 1,5x EM.\n\n---\n\n## 🎨 Typy sazby (Zarovnání)\n...\n---\n\n## ⚙️ Sazba a Zlom (Stránková montáž)\n- **Rámečky:** Všechny prvky (text, obrázky) musí být v rámečcích (InDesign). Snažíme se o co nejjednodušší strukturu.\n- **Řetězení:** Propojení rámečků pro plynulé přetékání dlouhého textu.\n- **Vrstvy:** Oddělení textu, obrázků a grafiky pro přehlednost.\n- **Import:** Fotografie nevkládáme přes schránku (CTRL+V), ale přes **[[Základní pravidla sazby#⚙️ Sazba a Zlom (Stránková montáž)|Import/Umístit]]**. Tím zachováme rozlišení a barevný profil. CTRL+V je přípustné jen pro jednoduché vektory.\n- **Vazby:** Import vytvoří link na originální soubor. Smazání nebo přesun originálu vazbu přeruší.\n\n---\n\n## 📐 Geometrie stránky\n...\n- **Dvoustránky:** Používáme pro tiskoviny s více než 4 stranami.\n- **[[05 Formáty papíru#✂️ Impozice (Vyřazování)|Spadávka]] (2–5 mm):** Nutná pro prvky sahající až k okraji papíru.\n- **Bezpečná vzdálenost:** Objekty (včetně čísel stran) by měly být minimálně 3 mm od okraje či lomu.\n...\n---\n## 🔗 Související témata\n...",
-            "audioUrl": "PLACEHOLDER-zakladni-pravidla-sazby-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-zakladni-pravidla-sazby-kviz",
-            "flashcardsUrl": "PLACEHOLDER-zakladni-pravidla-sazby-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           },
           {
             "id": "casopisy",
             "title": "Časopisy",
             "description": "Časopisy jsou periodické tiskoviny určené specifickým skupinám čtenářů. Vyznačují se náročnější grafickou úpravou, kvalitnějším papírem a specifick...",
             "content": "# 📰 Časopisy\n\n> [ABSTRACT] Stručný přehled\n> Časopisy jsou periodické tiskoviny určené specifickým skupinám čtenářů. Vyznačují se náročnější grafickou úpravou, kvalitnějším papírem a specifickým knihařským zpracováním.\n\n---\n\n## 📂 Rozdělení a parametry\n\n### Obsahové rozdělení\n- Zpravodajské, odborné, módní, kulturní, hobby, dětské.\n\n### Používané vazby\n- **[[Sazba knihy#Měkké vazby|V1]]:** Klasické sešitové časopisy.\n- **[[Sazba knihy#Měkké vazby|V2]]:** Luxusnější časopisy, katalogy, příručky.\n\n---\n\n## ⚙️ Výrobní proces\n\n### Knihařské (dokončovací) zpracování\n- **Řezání:** Zpracování na čistý formát.\n- **Skládání:** Skládání do jednotlivých složek.\n- **Speciální úpravy:** Laminování obálky, UV lakování, ražba.\n\n### Příprava a sazba\n- Nastavení zrcadla sazby a typografie.\n- Úprava fotografií pro tisk ([[06 Technologická příprava zakázky#Rozlišení|DPI]], barevné korekce).\n- Kontrola a korektura (nátisk a náhled).\n\n---\n\n## 🎨 Grafická úprava obálky\n- **Výběr písma:** Musí odpovídat obsahu (móda = tenký patkový, IT = moderní bezpatkový).\n- **Výběr barev:** Standardně profil FOGRA39, harmonické nebo kontrastní kombinace.\n- **Rozvržení:** Dominantní logotyp v zóně pozornosti, hlavní titulek (zpráva), výrazné fotografie.\n- **Korektura:** Kontrola gramatiky a barevnosti (nátisk) před tiskem.\n\n---\n\n## 🖊️ Grafická úprava vnitřku\n- **Text:** Sazba do sloupců, zarovnání do bloku.\n- **Typografie:** Odsazení odstavců (čtverčík), důraz na čitelnost, časté užití patkového písma.\n- **Fotografie:** Musí doplňovat text (reportážní, portréty atd.).\n\n---\n## 🔗 Související témata\n- [[Akcidenční tiskoviny|📄 Akcidenční tiskoviny]]\n- [[03 Polygrafické výrobky|📦 Polygrafické výrobky]]\n- [[Domů|Zpět na hlavní přehled]]",
-            "audioUrl": "PLACEHOLDER-casopisy-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-casopisy-kviz",
-            "flashcardsUrl": "PLACEHOLDER-casopisy-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           }
         ]
       },
@@ -168,40 +168,40 @@ export const subjects: Subject[] = [
             "title": "Digitální tisk",
             "description": "Digitální tisk je moderní technika umožňující přímý převod dat na materiál bez nutnosti tiskové formy. Klíčovým procesem je **RIP** (převod dat na ...",
             "content": "# 🖨️ Digitální tisk\n\n> [ABSTRACT] Stručný přehled\n> Digitální tisk je moderní technika umožňující přímý převod dat na materiál bez nutnosti tiskové formy. Klíčovým procesem je **[[Kontrola tisku#🖥️ RIP a elektronický bod|RIP]]** (převod dat na rastr). Tato technologie vyniká rychlostí, personalizací a efektivitou u malých nákladů.\n\n---\n\n## 📂 Druhy digitálního tisku\n\n### Tonerový tisk (Elektrofotografie)\n- Používá se v laserových tiskárnách (např. Konica Minolta).\n- **Princip:** Fotoválec se nabije, laser „vypálí“ obraz (vybití míst dopadu světla), toner (prášek) přilne k nabitým místům a teplem se zafixuje na materiál.\n\n### Inkoustový tisk (Inkjet)\n- Od domácích po velkoformátové stroje.\n- **Princip:** Tisková hlava vystřeluje mikrokapky inkoustu.\n- **Typy inkoustů:**\n  - Vodou ředitelné (papír).\n  - UV inkousty (vytvrzované UV lampou).\n  - Latexové (ekologické, venkovní reklama).\n\n---\n\n## ⚙️ Výhody a nevýhody\n\n### Výhody\n- **Rychlost:** Žádná příprava tiskové formy.\n- **Personalizace (VDP):** Každý výtisk může mít jiný obsah (jména, kódy).\n- **Efektivita:** Ekonomické pro malé náklady (0–500 ks).\n- **Materiály:** Široký výběr potiskovaných podkladů.\n\n### Nevýhody\n- Vyšší cena za kus u velkých nákladů.\n- Omezená trvanlivost inkoustů.\n- Nižší barevná stálost oproti ofsetu.\n\n---\n\n## 🏛️ Hlavní využití v polygrafii\n\n- **Akcidenční tiskoviny:** Vizitky, letáky, plakáty s variabilními daty.\n- **Reklamní tisk:** Velkoformátové bannery, rollupy.\n- **Vydavatelský tisk:**\n  - **Print-on-Demand (POD):** Tisk knih až po objednání zákazníkem.\n  - Časopisy v malých nákladech s vysokou kvalitou.\n- **Obalový design:** Tisk prototypů a personalizovaných obalů.\n- **Speciální materiály:** Textil, dřevo, sklo, kov ([[03 Polygrafické výrobky#UV tisk|UV tisk]]), řezané samolepky.\n\n---\n## 🔗 Související témata\n- [[01 Reprodukce textu a obrazu|🖨️ Základy reprodukce]]\n- [[Ofsetové barvy|🎨 Ofsetové barvy]]\n- [[Domů|Zpět na hlavní přehled]]",
-            "audioUrl": "PLACEHOLDER-digitalni-tisk-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-digitalni-tisk-kviz",
-            "flashcardsUrl": "PLACEHOLDER-digitalni-tisk-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           },
           {
             "id": "formaty-papiru",
             "title": "Formáty papíru",
             "description": "Systém velikostí papíru je standardizován normou **ČSN EN ISO 216**. Tento systém usnadňuje práci v tiskárnách a snižuje náklady díky efektivnímu v...",
             "content": "# 📄 Formáty papíru\n\n> [ABSTRACT] Stručný přehled\n> Systém velikostí papíru je standardizován normou **ČSN EN ISO 216**. Tento systém usnadňuje práci v tiskárnách a snižuje náklady díky efektivnímu využití archů.\n\n---\n\n## 📏 Standardizace a řady\nNorma ISO 216 platí po celém světě (s malými výjimkami) a zaručuje konzistentní rozměry.\n\n### Základní řady\n- **Řada A:** Základní formáty pro běžné použití.\n- **Řada B a SRA:** Větší formáty umožňující bezokrajový tisk (se spadávkou).\n  - **B:** Typické pro ofsetový tisk.\n  - **SRA:** Typické pro digitální tisk.\n- **Řada C:** Formáty určené pro obálky.\n\n### Princip poměru stran\nPoměr stran všech formátů je **1 : √2**. To umožňuje skládání papíru na polovinu při zachování stejného poměru stran.\n\n---\n\n## 📐 Rozdělení formátů v praxi\n- **Čistý:** Výsledný oříznutý formát tiskoviny.\n- **Hrubý (R):** Velikost formátu včetně spadávky (přesahu na ořez).\n- **Superhrubý (SR):** Označení pro celé tiskové archy (TA).\n\n---\n\n## 📂 Velikosti základních formátů\n\n| Název formátu | Šířka (mm) | Výška (mm) |\n| :--- | :--- | :--- |\n| **A4** | 210 | 297 |\n| **A3** | 297 | 420 |\n| **A5** | 148 | 210 |\n| **DL** | 210 | 99 |\n| **B2** | 500 | 707 |\n| **Vizitka česká** | 90 | 50 |\n| **Vizitka evropská** | 85 | 55 |\n\n---\n## 🔗 Související témata\n- [[05 Formáty papíru|📄 Základy formátů (1. ročník)]]\n- [[Výroba papíru|📜 Výroba papíru]]\n- [[Domů|Zpět na hlavní přehled]]",
-            "audioUrl": "PLACEHOLDER-formaty-papiru-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-formaty-papiru-kviz",
-            "flashcardsUrl": "PLACEHOLDER-formaty-papiru-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           },
           {
             "id": "kontrola-tisku",
             "title": "Kontrola tisku",
             "description": "Kontrola tisku zajišťuje shodu mezi návrhem a výsledkem. Využívá měřicí přístroje (denzitometr), kontrolní prvky (měrný proužek) a systémy správy b...",
             "content": "# 🔍 Kontrola tisku\n\n> [ABSTRACT] Stručný přehled\n> Kontrola tisku zajišťuje shodu mezi návrhem a výsledkem. Využívá měřicí přístroje ([[Kontrola tisku#🏛️ Měřicí přístroje|denzitometr]]), kontrolní prvky (měrný proužek) a systémy správy barev (**CMS**).\n\n---\n\n## 📏 Měrný proužek a parametry\nKvalita se měří na políčkách měrného proužku pomocí **[[Kontrola tisku#🏛️ Měřicí přístroje|denzitometru]]**.\n\n### Zkoumané parametry:\n- **Sytost a správnost barev:** Kontrola pod kalibrovaným denním světlem.\n- **Oboustranný tisk:** Lícování přední a zadní strany archu.\n- **Tiskový kontrast:** Čitelnost, zejména u textů.\n- **Soutisk:** Přesné překrytí barev (využití knihovny PANTONE).\n\n---\n\n...\n\n## 🖥️ [[Digitální tisk#Co to je?|RIP]] a elektronický bod\n- **[[Digitální tisk#Co to je?|RIP]] (Raster Image Processor):** Převod dat na tiskový rastr.\n  - Parametry: Tvar bodu, hustota (**LPI**), typ rastrování (**AM/FM**).\n- **Elektronický bod:** Nejmenší jednotka obrazu (pixel).\n- **Rozlišení:** Počet bodů na délku (např. **[[06 Technologická příprava zakázky#Rozlišení|DPI]]**) určuje výslednou kvalitu.\n\n---\n\n## 🎨 Color Management (CMS)\nCílem CMS je barevná shoda napříč zařízeními.\n\n### [[Kontrola tisku#ICC profil|ICC profil]]\n- Datový soubor popisující barevné možnosti konkrétního zařízení.\n- Umožňuje převod mezi barevnými prostory (např. z RGB monitoru do tiskového [[06 Technologická příprava zakázky#Barevnost|CMYKu]]).\n\n### Barevné modely (prostory)\nBarvy jsou definovány nezávisle na zařízení na základě vnímání lidským okem.\n...\n---\n## 🔗 Související témata\n...",
-            "audioUrl": "PLACEHOLDER-kontrola-tisku-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-kontrola-tisku-kviz",
-            "flashcardsUrl": "PLACEHOLDER-kontrola-tisku-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           },
           {
             "id": "skener",
             "title": "Skener",
             "description": "Skener je vstupní hardwarové zařízení pro digitalizaci obrazových předloh. Proces využívá osvit předlohy a následné zachycení odraženého nebo prošl...",
             "content": "# 📷 Skener\n\n> [ABSTRACT] Stručný přehled\n> Skener je vstupní hardwarové zařízení pro digitalizaci obrazových předloh. Proces využívá osvit předlohy a následné zachycení odraženého nebo prošlého světla senzorem.\n\n---\n\n## ⚙️ Princip skenování\n1. **Nasvícení:** Předloha je na ploše osvětlena zdrojem (např. LED).\n2. **Odraz/Průchod:** Světlo se odrazí (odrazová předloha) nebo projde (průhledná předloha) a je zachyceno optickým snímačem.\n3. **Převod:** Informace jsou převedeny A/D převodníkem na digitální data.\n4. **Uložení:** Data jsou uložena do souboru.\n\n---\n\n## 📂 Typy předloh a parametry\n\n### Typy předloh\n- **Odrazová:** Běžná (papír).\n- **Průhledná:** Pozitiv, negativ (filmy).\n\n### Základní parametry\n- **Procento reprodukce:** Nastavení při zvětšování pro zachování správného rozlišení.\n- **Barevný režim:**\n  - **Duplex:** Dvě barvy (černá + doplňková pro tónování).\n  - **Stupně šedi:** 256 odstínů černé.\n  - **Čtyřbarvotisk:** Plný CMYK.\n\n---\n\n## 🛠️ Typy skenerů\n\n- **Ruční:** Malá kvalita, nepřesné ovládání, dnes jen specifické užití.\n- **Stolní (Plochý):** Předloha leží na skle, pod ním projíždí rameno. Vhodné pro tenké předlohy.\n- **Bubnový:** Předloha nalepená na rotujícím válci, snímání paprskem. Nejvyšší kvalita.\n- **Filmový:** Specializovaný na digitalizaci filmů a diapozitivů.\n\n---\n## 🔗 Související témata\n- [[06 Technologická příprava zakázky|📁 Příprava zakázky]]\n- [[01 Reprodukce textu a obrazu|🖨️ Základy reprodukce]]\n- [[Domů|Zpět na hlavní přehled]]",
-            "audioUrl": "PLACEHOLDER-skener-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-skener-kviz",
-            "flashcardsUrl": "PLACEHOLDER-skener-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           }
         ]
       },
@@ -235,20 +235,20 @@ export const subjects: Subject[] = [
             "title": "Ofsetové barvy",
             "description": "Vysoce pigmentované, pastózní barvy s malým obsahem pojiv. Musí umožnit dokonalé vybarvení i při velmi tenkém filmu a nesmí zasychat na válcích.",
             "content": "# 🎨 Ofsetové barvy\n\n> [ABSTRACT] Stručný přehled\n> Vysoce pigmentované, pastózní barvy s malým obsahem pojiv. Musí umožnit dokonalé vybarvení i při velmi tenkém filmu a nesmí zasychat na válcích.\n\n---\n\n## 🧪 Vlastnosti ofsetových barev\n- **Pastózní konzistence.**\n- **Nízká tloušťka filmu.**\n- **Vysoká pigmentace.**\n\n---\n\n## 🖨️ Typy ofsetového tisku\n\n### Archový tisk\n- Vyšší viskozita barev.\n\n### Kotoučový tisk\n- Obsahuje více pigmentů a minerálních olejů.\n- **Heatsetové barvy:** Zasychají horkým vzduchem nebo IR zářením.\n- **Coldsetové barvy:** Zasychají za pokojové teploty (novinový tisk).\n\n---\n\n## 📂 Další rozdělení a zpracování\n\n### Speciální úpravy\n- **Bigování:** Vytváření rýhy pro snazší skládání u silnějších materiálů (letáky, krabičky).\n\n### Rozdělení dle využití\n- Knižní barvy, novinové barvy, barvy pro časopisy.\n- Barvy pro tisk obalů a etiket.\n- Ofset bez vlhčení (obsahují speciální oleje).\n\n\n---\n## 🔗 Související témata\n- [[01 Reprodukce textu a obrazu|🖨️ Základy reprodukce]]\n- [[Výroba papíru|📜 Výroba papíru]]\n- [[03 Polygrafické výrobky|📦 Polygrafické výrobky]]\n- [[Domů|Zpět na hlavní přehled]]",
-            "audioUrl": "PLACEHOLDER-ofsetove-barvy-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-ofsetove-barvy-kviz",
-            "flashcardsUrl": "PLACEHOLDER-ofsetove-barvy-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           },
           {
             "id": "vyroba-papiru",
             "title": "Výroba papíru",
             "description": "Papír se vyrábí z papíroviny – vodné suspenze rostlinných vláken (buničina, dřevina), plnidel, klížidel a barviv.",
             "content": "# 📜 Výroba papíru\n\n> [ABSTRACT] Stručný přehled\n> Papír se vyrábí z papíroviny – vodné suspenze rostlinných vláken (buničina, dřevina), plnidel, klížidel a barviv.\n\n---\n\n## 🧪 Složení papíroviny\n- **Voda:** Pro ředění a transport.\n- **Rostlinná vlákna:** Základní surovina (nejčastěji dřevo).\n  - **Dřevina:** Mechanicky získaná vlákna.\n  - **Buničina:** Chemicky získaná vlákna (vyšší kvalita).\n- **Plnidla:** Zlepšují tiskové vlastnosti, vyplňují mezery mezi vlákny.\n- **Klížidla:** Zajišťují odolnost proti vodě a propíjení barev.\n- **Barviva:** Pro dosažení požadovaného odstínu.\n\n---\n\n## ⚙️ Papírenský stroj\nProces probíhá ve čtyřech hlavních fázích:\n\n1. **Sítová část:** Nátok naředěné vláknoviny na síto.\n2. **Lisová část:** Odsávání vody tlakem.\n3. **Sušící část:** Odstranění zbylé vlhkosti teplem.\n4. **Hladící stolice a navíječ:** Uhlazení povrchu a navinutí na role.\n\n\n---\n## 🔗 Související témata\n- [[05 Formáty papíru|📄 Formáty papíru]]\n- [[01 Reprodukce textu a obrazu|🖨️ Základy reprodukce]]\n- [[Ofsetové barvy|🎨 Ofsetové barvy]]\n- [[Domů|Zpět na hlavní přehled]]",
-            "audioUrl": "PLACEHOLDER-vyroba-papiru-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-vyroba-papiru-kviz",
-            "flashcardsUrl": "PLACEHOLDER-vyroba-papiru-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           }
         ]
       },
@@ -282,10 +282,10 @@ export const subjects: Subject[] = [
             "title": "Pojmy",
             "description": "Přehled základních termínů z oblasti písma, klasifikace typografických znaků a anatomie písmen.",
             "content": "# 🎨 Typografické pojmy\n\n> [ABSTRACT] Stručný přehled\n> Přehled základních termínů z oblasti písma, klasifikace typografických znaků a anatomie písmen.\n\n---\n\n## 🏛️ Klasifikace a hierarchie\n\n### Klasifikační skupina\n- Rozdělení typografických písem a znaků do 11 skupin (např. kaligrafická, antikva).\n\n### Písmová rodina\n- Konkrétní druh písma ve všech dostupných řezech a velikostech.\n\n### Řez písma\n- Různé styly v rámci jednoho fontu (Bold, Italic, Light...).\n\n---\n\n## 📐 Anatomie a typy písma\n\n- **Serif (Patka):** Ukončení tahů jednotlivých písmen (serifová písma).\n- **Antikva:** Jedno z nejstarších tiskových písem (serifové).\n- **Grotesk:** Bezpatkové písmo, používané v novinách a knihách.\n- **Kapitálky:** Velká písmena zmenšená na výšku malých (x-height).\n- **Verzálky:** Velká písmena abecedy.\n\n---\n\n## 🖊️ Osa stínování\nUrčuje dynamiku a sklon písma:\n1. **Šikmá osa:** Typická pro klasickou kurzívu.\n2. **Statická osa:** Rovné, svislé písmo.\n\nMění zaoblení písmen, šířku oblouků a celkový vizuální dojem fontu.\n\n\n---\n## 🔗 Související témata\n- [[04 Design dokumentů|📐 Design dokumentů]]\n- [[Domů|Zpět na hlavní přehled]]",
-            "audioUrl": "PLACEHOLDER-pojmy-audio",
+            "audioUrl": "",
             "notebookLmUrl": "https://notebooklm.google.com/",
-            "quizUrl": "PLACEHOLDER-pojmy-kviz",
-            "flashcardsUrl": "PLACEHOLDER-pojmy-karticky"
+            "quizUrl": "",
+            "flashcardsUrl": ""
           }
         ]
       },
