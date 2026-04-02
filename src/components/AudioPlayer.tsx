@@ -70,11 +70,13 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, title }) => {
     setDuration(0);
   }, [src]);
 
+  const audioSrc = src.startsWith('/') ? `${import.meta.env.BASE_URL}${src.slice(1)}` : src;
+
   return (
     <div className="w-full p-6 rounded-[2rem] border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#18181b] shadow-sm flex flex-col gap-5">
       <audio 
         ref={audioRef} 
-        src={src} 
+        src={audioSrc} 
         onEnded={() => setIsPlaying(false)} 
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
