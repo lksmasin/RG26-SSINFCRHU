@@ -1,0 +1,49 @@
+properties:
+  file.name:
+    displayName: Jméno
+  Číslo:
+    type: number
+  Stav:
+    type: select
+    options:
+      - 🔴 K vypracování
+      - 🟡 Rozpracováno
+      - 🟢 Hotovo
+  Ročník:
+    type: select
+    options:
+      - 1. ročník
+      - 2. ročník
+      - 3. ročník
+  Téma:
+    type: text
+  Štítky:
+    type: tags
+  file.mday:
+    displayName: Poslední úprava
+    type: date
+views:
+  - type: table
+    name: Přehled témat
+    filters:
+      or:
+        - file.inFolder("sesity/Polygraficka výroba/1. ročník")
+        - file.inFolder("sesity/Polygraficka výroba/2. ročník")
+        - file.inFolder("sesity/Polygraficka výroba/3. ročník")
+    order:
+      - Číslo
+      - Stav
+      - Téma
+      - Ročník
+      - Štítky
+      - file.mday
+    sort:
+      - property: Ročník
+        direction: ASC
+      - property: Číslo
+        direction: ASC
+    columnSize:
+      note.Téma: 400
+      note.Stav: 150
+      note.Ročník: 120
+      note.Číslo: 80

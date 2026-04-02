@@ -1,0 +1,48 @@
+properties:
+  file.name:
+    displayName: Název souboru
+  Předmět:
+    type: select
+    options:
+      - Technologie
+      - Písmo a odborné kreslení
+      - Materiály
+      - Polygrafická výroba
+  Ročník:
+    type: select
+    options:
+      - 1. ročník
+      - 2. ročník
+      - 3. ročník
+  Číslo:
+    type: number
+  Téma:
+    type: text
+  Štítky:
+    type: tags
+views:
+  - type: table
+    name: Všechny poznámky
+    filters:
+      and:
+        - file.inFolder("sesity")
+        - "!Předmět.isEmpty()"
+    order:
+      - Předmět
+      - Ročník
+      - Číslo
+      - Téma
+      - Štítky
+    sort:
+      - property: Předmět
+        direction: ASC
+      - property: Ročník
+        direction: ASC
+      - property: Číslo
+        direction: ASC
+  - type: cards
+    name: Galerie témat
+    filters:
+      and:
+        - file.inFolder("sesity")
+        - Předmět.isNotEmpty()

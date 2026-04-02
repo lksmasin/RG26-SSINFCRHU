@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  --color-bg-light: #f8f9fa;
+  --color-bg-dark: #0f0f11;
+  
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #18181b;
+  
+  --color-accent: #f97316; /* Vibrant Orange */
+}
+
+@layer base {
+  html, body {
+    @apply h-full w-full m-0 p-0;
+  }
+  
+  body {
+    @apply font-sans bg-[var(--color-bg-light)] text-neutral-900 transition-colors duration-300 antialiased selection:bg-accent selection:text-white;
+  }
+  
+  .dark body {
+    @apply bg-[var(--color-bg-dark)] text-neutral-100;
+  }
+
+  /* Typography overrides for the new editorial look */
+  .prose {
+    @apply max-w-none text-lg leading-relaxed;
+  }
+  .prose h1 { @apply font-serif text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8 mt-12; }
+  .prose h2 { @apply font-serif text-3xl font-semibold mt-16 mb-6 pb-4 border-b border-neutral-200 dark:border-neutral-800; }
+  .prose h3 { @apply font-sans text-xl font-semibold tracking-tight mt-10 mb-4; }
+  .prose p { @apply mb-6; }
+  .prose a { @apply font-medium text-accent hover:text-orange-600 dark:hover:text-orange-400 underline decoration-2 underline-offset-4 transition-colors; }
+  .prose ul, .prose ol { @apply mb-6 pl-6; }
+  .prose li { @apply mb-2; }
+  .prose li::marker { @apply text-accent font-bold; }
+  .prose strong { @apply font-semibold; }
+  .prose blockquote { 
+    @apply font-serif text-xl italic border-l-4 border-accent pl-6 py-2 my-8 bg-neutral-50 dark:bg-neutral-900/50 rounded-r-2xl; 
+  }
+  .prose code { @apply font-mono text-sm bg-neutral-100 dark:bg-neutral-800 px-1.5 py-0.5 rounded-md; }
+  
+  /* Tables */
+  .prose table { @apply w-full text-left border-collapse my-10; }
+  .prose th { @apply font-sans font-semibold text-sm uppercase tracking-wider pb-4 border-b-2 border-neutral-200 dark:border-neutral-800; }
+  .prose td { @apply py-4 border-b border-neutral-100 dark:border-neutral-800/50; }
+}
+
+/* Custom UI Elements */
+.glass-panel {
+  @apply bg-white/80 dark:bg-[#18181b]/80 backdrop-blur-xl border border-neutral-200/50 dark:border-neutral-800/50;
+}
+
+.editorial-card {
+  @apply bg-[var(--color-surface-light)] dark:bg-[var(--color-surface-dark)] border border-neutral-200 dark:border-neutral-800 rounded-3xl overflow-hidden transition-all duration-300;
+}
+
+/* Callouts */
+.callout {
+  @apply my-8 p-6 rounded-2xl border flex flex-col gap-3 shadow-sm;
+}
+.callout-title { @apply font-sans font-bold flex items-center gap-2.5 text-sm uppercase tracking-widest; }
+.callout-content { @apply text-sm md:text-base leading-relaxed; }
+
+.callout-abstract { @apply bg-cyan-50/50 dark:bg-cyan-900/10 border-cyan-200 dark:border-cyan-800/50 text-cyan-900 dark:text-cyan-100; }
+.callout-abstract .callout-title { @apply text-cyan-700 dark:text-cyan-400; }
+
+.callout-info { @apply bg-blue-50/50 dark:bg-blue-900/10 border-blue-200 dark:border-blue-800/50 text-blue-900 dark:text-blue-100; }
+.callout-info .callout-title { @apply text-blue-700 dark:text-blue-400; }
+
+.callout-warning { @apply bg-orange-50/50 dark:bg-orange-900/10 border-orange-200 dark:border-orange-800/50 text-orange-900 dark:text-orange-100; }
+.callout-warning .callout-title { @apply text-orange-700 dark:text-orange-400; }
+
+.callout-success { @apply bg-emerald-50/50 dark:bg-emerald-900/10 border-emerald-200 dark:border-emerald-800/50 text-emerald-900 dark:text-emerald-100; }
+.callout-success .callout-title { @apply text-emerald-700 dark:text-emerald-400; }
+
+.callout-error { @apply bg-rose-50/50 dark:bg-rose-900/10 border-rose-200 dark:border-rose-800/50 text-rose-900 dark:text-rose-100; }
+.callout-error .callout-title { @apply text-rose-700 dark:text-rose-400; }
+
+/* 3D for flashcards */
+.perspective-1000 { perspective: 1000px; }
+.preserve-3d { transform-style: preserve-3d; }
+.backface-hidden { backface-visibility: hidden; }
+.rotate-y-180 { transform: rotateY(180deg); }
+
+/* Hide scrollbar for cleaner look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
