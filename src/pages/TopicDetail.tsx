@@ -95,40 +95,43 @@ export const TopicDetail: React.FC = () => {
   }
 
   return (
-    <div className="w-full max-w-7xl mx-auto flex flex-col xl:flex-row gap-12 lg:gap-16 pb-20">
+    <div className="w-full max-w-7xl mx-auto pb-20">
       
-      {/* Left Column: Content */}
-      <div className={`w-full ${hasTools ? 'xl:w-[65%]' : 'max-w-4xl mx-auto'}`}>
+      {/* Header and Back Link (Always on top) */}
+      <div className="mb-10 lg:mb-14">
         <Link 
           to={`/subjects/${subject.id}`} 
-          className="inline-flex items-center text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors mb-12"
+          className="inline-flex items-center text-xs sm:text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors mb-8 lg:mb-12"
         >
           <ChevronLeft className="w-4 h-4 mr-1" /> {subject.name}
         </Link>
 
-        <header className="mb-14">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight mb-6">
-            {topic.title}
-          </h1>
-          <p className="font-sans text-xl text-neutral-500 dark:text-neutral-400 leading-relaxed">
-            {topic.description}
-          </p>
-        </header>
-
-        <div className="prose prose-zinc dark:prose-invert">
-          <ReactMarkdown 
-            remarkPlugins={[remarkGfm]}
-            components={MarkdownComponents}
-          >
-            {sanitizeContent(topic.content)}
-          </ReactMarkdown>
-        </div>
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight mb-4 lg:mb-6">
+          {topic.title}
+        </h1>
+        <p className="font-sans text-base sm:text-lg lg:text-xl text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-4xl">
+          {topic.description}
+        </p>
       </div>
 
-      {/* Right Column: Interactive Sidebar (Sticky) */}
-      {hasTools && (
-        <aside className="w-full xl:w-[35%]">
-          <div className="sticky top-24 editorial-card bg-neutral-100/50 dark:bg-neutral-900/50 p-6 sm:p-8 border-none ring-1 ring-neutral-200 dark:ring-neutral-800 flex flex-col gap-6">
+      <div className="flex flex-col-reverse xl:flex-row gap-12 lg:gap-16">
+        
+        {/* Left Column: Content */}
+        <div className={`w-full ${hasTools ? 'xl:w-[65%]' : 'max-w-4xl mx-auto'}`}>
+          <div className="prose prose-zinc dark:prose-invert">
+            <ReactMarkdown 
+              remarkPlugins={[remarkGfm]}
+              components={MarkdownComponents}
+            >
+              {sanitizeContent(topic.content)}
+            </ReactMarkdown>
+          </div>
+        </div>
+
+        {/* Right Column: Interactive Sidebar (Sticky) */}
+        {hasTools && (
+          <aside className="w-full xl:w-[35%]">
+            <div className="xl:sticky xl:top-24 editorial-card bg-neutral-100/50 dark:bg-neutral-900/50 p-6 sm:p-8 border-none ring-1 ring-neutral-200 dark:ring-neutral-800 flex flex-col gap-6">
             
             <div className="flex gap-2 mb-2 border-b border-neutral-200 dark:border-neutral-800 pb-4 overflow-x-auto no-scrollbar">
               {hasAudio && (
@@ -233,6 +236,7 @@ export const TopicDetail: React.FC = () => {
         </aside>
       )}
 
+      </div>
     </div>
   );
 };
