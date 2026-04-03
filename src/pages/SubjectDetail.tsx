@@ -18,10 +18,10 @@ export const SubjectDetail: React.FC = () => {
       </Link>
 
       <header className="mb-20">
-        <p className="font-sans font-bold text-accent tracking-widest uppercase text-sm mb-4">Osnova předmětu</p>
         <h1 className="font-serif text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white leading-tight">
           {subject.name}
         </h1>
+        <p className="font-sans text-neutral-500 dark:text-neutral-400 mt-4 text-lg">Tady máš všechno, co k tomuhle předmětu máme.</p>
       </header>
 
       <div className="space-y-24">

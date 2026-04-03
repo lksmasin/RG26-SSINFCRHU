@@ -7,8 +7,8 @@ export const Subjects: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto py-10 px-4">
       <header className="mb-16">
-        <p className="font-sans font-bold text-accent tracking-widest uppercase text-sm mb-4">Navigace</p>
-        <h1 className="font-serif text-5xl font-bold text-neutral-900 dark:text-white">Předměty</h1>
+        <h1 className="font-serif text-5xl font-bold text-neutral-900 dark:text-white">Co se budem učit?</h1>
+        <p className="font-sans text-neutral-500 dark:text-neutral-400 mt-4 text-lg">Vyber si předmět a mrkni na vypracovaný témata.</p>
       </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
