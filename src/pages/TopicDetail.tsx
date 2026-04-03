@@ -99,7 +99,7 @@ export const TopicDetail: React.FC = () => {
         </p>
       </div>
 
-      <div className="flex flex-col-reverse xl:flex-row gap-12 lg:gap-16">
+      <div className="flex flex-col xl:flex-row gap-12 lg:gap-16">
         
         {/* Left Column: Content */}
         <div className={`w-full ${hasTools ? 'xl:w-[65%]' : 'max-w-4xl mx-auto'}`}>

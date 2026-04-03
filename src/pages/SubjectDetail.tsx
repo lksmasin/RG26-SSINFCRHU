@@ -26,7 +26,8 @@ export const SubjectDetail: React.FC = () => {
 
       <div className="space-y-24">
         {subject.years.map((year) => {
-          if (year.topics.length === 0) return null;
+          const visibleTopics = year.topics.filter(t => t.id !== 'zaverecne-opakovani');
+          if (visibleTopics.length === 0) return null;
           
           return (
             <section key={year.id} className="relative">
@@ -40,7 +41,7 @@ export const SubjectDetail: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pl-0">
-                {year.topics.map((topic) => {
+                {visibleTopics.map((topic) => {
                   const isValidUrl = (url?: string) => !!url && url.trim() !== '' && !url.startsWith('PLACEHOLDER');
                   const hasAudio = isValidUrl(topic.audioUrl);
                   const hasQuiz = isValidUrl(topic.quizUrl) || isValidUrl(topic.quizEasyUrl) || isValidUrl(topic.quizHardUrl);
@@ -78,19 +79,24 @@ export const SubjectDetail: React.FC = () => {
         {/* Final Review for Technologie */}
         {subject.id === 'technologie' && (
           <section className="pt-10 border-t border-neutral-200 dark:border-neutral-800">
-            <div className="editorial-card p-10 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 text-center space-y-6">
-              <h2 className="font-serif text-4xl font-bold">Závěrečné opakování</h2>
-              <p className="text-neutral-400 dark:text-neutral-500 max-w-xl mx-auto text-lg">
+            <Link 
+              to={`/subjects/${subject.id}/topics/zaverecne-opakovani`}
+              className="editorial-card p-8 md:p-10 group hover:border-accent dark:hover:border-accent hover:shadow-xl transition-all flex flex-col items-center text-center"
+            >
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-accent transition-colors">
+                Závěrečné opakování
+              </h2>
+              <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm md:text-base max-w-2xl mx-auto">
                 Ucelený přehled úplně všeho od 1. do 3. ročníku. Ideální příprava těsně před zkouškou.
               </p>
-              <div className="flex flex-wrap justify-center items-center gap-4 pt-4 text-[10px] font-bold uppercase tracking-widest">
-                <a href="https://notebooklm.google.com/notebook/78f6e331-b64e-4e33-bdec-13a8240caeb9" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-orange-600 text-white rounded-xl hover:scale-105 transition-all">Souhrnný Podcast</a>
-                <a href="https://notebooklm.google.com/notebook/78f6e331-b64e-4e33-bdec-13a8240caeb9" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 text-white rounded-xl hover:scale-105 transition-all">Velký Kvíz</a>
-                <a href="https://notebooklm.google.com/notebook/78f6e331-b64e-4e33-bdec-13a8240caeb9" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-emerald-600 text-white rounded-xl hover:scale-105 transition-all">Všechny Kartičky</a>
-                <a href="https://notebooklm.google.com/notebook/78f6e331-b64e-4e33-bdec-13a8240caeb9" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-rose-600 text-white rounded-xl hover:scale-105 transition-all">Souhrnné Video</a>
-                <a href="https://notebooklm.google.com/notebook/78f6e331-b64e-4e33-bdec-13a8240caeb9" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-purple-600 text-white rounded-xl hover:scale-105 transition-all">Prezentace</a>
+              <div className="mt-8 flex flex-wrap justify-center items-center gap-3 text-[10px] font-bold uppercase tracking-widest">
+                <span className="px-2.5 py-1 rounded-md bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">Podcast</span>
+                <span className="px-2.5 py-1 rounded-md bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Kvíz</span>
+                <span className="px-2.5 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">Flashcards</span>
+                <span className="px-2.5 py-1 rounded-md bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400">Video</span>
+                <span className="px-2.5 py-1 rounded-md bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">Prezentace</span>
               </div>
-            </div>
+            </Link>
           </section>
         )}
 

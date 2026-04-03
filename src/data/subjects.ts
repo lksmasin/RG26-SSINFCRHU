@@ -237,6 +237,17 @@ export const subjects: Subject[] = [
             "flashcardsUrl": "https://notebooklm.google.com/notebook/4a4b3bbb-5192-4835-8be9-da59a9f42a2c?artifactId=d0e5cf88-eef2-4a0d-aad9-6105d7e47514",
             "videoUrl": "https://notebooklm.google.com/notebook/4a4b3bbb-5192-4835-8be9-da59a9f42a2c?artifactId=4adc8523-eb48-47d7-8b83-4926d0a477ce",
             "presentationUrl": "https://notebooklm.google.com/notebook/4a4b3bbb-5192-4835-8be9-da59a9f42a2c?artifactId=3e4d8cdf-4726-4dc5-b629-4a0c84ae7aea"
+          },
+          {
+            "id": "zaverecne-opakovani",
+            "title": "Závěrečné opakování",
+            "description": "Ucelený přehled úplně všeho od 1. do 3. ročníku. Ideální příprava těsně před zkouškou.",
+            "content": "# 🎓 Závěrečné opakování\n\nTato sekce slouží k ucelenému opakování všech témat probraných od 1. do 3. ročníku. V pravém panelu najdeš souhrnný podcast, velký kvíz, všechny kartičky, video a prezentaci.\n\nPres odkaz nize se dostanes do Google NotebookLM kde je AI ktere ma pristup ke vsem zapiskum z tohoto predmetu takze se ho muzes zeptat pokud necemu nerozumis: \n\nhttps://notebooklm.google.com/notebook/0ee40c13-af15-4e39-97ee-9887b58c41e7?authuser=1",
+            "audioUrl": "/audio/Tec - Kompletni opakovani.m4a",
+            "quizUrl": "https://notebooklm.google.com/notebook/0ee40c13-af15-4e39-97ee-9887b58c41e7?artifactId=eca9d4e1-d359-453f-b21f-d17e07e34587",
+            "flashcardsUrl": "https://notebooklm.google.com/notebook/0ee40c13-af15-4e39-97ee-9887b58c41e7?artifactId=1ae98dcd-0807-4acb-a73a-334e8e19517c",
+            "videoUrl": "https://notebooklm.google.com/notebook/0ee40c13-af15-4e39-97ee-9887b58c41e7?artifactId=c7d5b45a-7e3e-484c-975b-5719f1913bbc",
+            "presentationUrl": "https://notebooklm.google.com/notebook/0ee40c13-af15-4e39-97ee-9887b58c41e7?artifactId=2f817f10-e1bb-44aa-9974-ccbb4947ac02"
           }
         ]
       },

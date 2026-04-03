@@ -36,7 +36,7 @@ export const About: React.FC = () => {
         <section className="prose prose-zinc dark:prose-invert">
           <h3>Aktuálnost materiálů</h3>
           <p>
-            Obsah poznámek je přizpůsoben požadavkům pro školní rok <strong>2025/2026</strong>. Vzhledem k tomu, že se osnovy a důraz na konkrétní témata mohou v čase měnit, doporučujeme vždy ověřit soulad s aktuálními požadavky vyučujících.
+            Obsah poznámek je přizpůsoben požadavkům pro školní rok <strong>2026</strong>. Vzhledem k tomu, že se osnovy a důraz na konkrétní témata mohou v čase měnit, doporučujeme vždy ověřit soulad s aktuálními požadavky vyučujících.
           </p>
         </section>
       </div>
