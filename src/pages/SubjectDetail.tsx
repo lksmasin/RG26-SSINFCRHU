@@ -27,6 +27,8 @@ export const SubjectDetail: React.FC = () => {
       <div className="space-y-24">
         {subject.years.map((year) => {
           if (year.topics.length === 0) return null;
+          const isTech = subject.id === 'technologie';
+          
           return (
             <section key={year.id} className="relative">
               <div className="absolute -left-4 md:-left-12 top-0 bottom-0 w-px bg-neutral-200 dark:bg-neutral-800 hidden md:block" />
@@ -54,7 +56,7 @@ export const SubjectDetail: React.FC = () => {
                     <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-accent transition-colors">
                       {topic.title}
                     </h3>
-                    <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm md:text-base">
+                    <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm md:text-base line-clamp-2">
                       {topic.description}
                     </p>
                     <div className="mt-8 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-widest">
@@ -65,10 +67,46 @@ export const SubjectDetail: React.FC = () => {
                   </Link>
                   );
                 })}
+
+                {/* Yearly Review Card for Technologie */}
+                {isTech && (
+                  <div className="editorial-card p-6 md:p-8 bg-accent/5 border-accent/20 border-dashed flex flex-col justify-between">
+                    <div>
+                      <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white mb-4">
+                        Opakování {year.id}. ročníku
+                      </h3>
+                      <p className="text-neutral-600 dark:text-neutral-400 text-sm md:text-base leading-relaxed">
+                        Souhrnný test, kartičky a podcast pro všechna témata za {year.label}.
+                      </p>
+                    </div>
+                    <div className="mt-8 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-widest">
+                      <a href={year.id === 1 ? 'https://notebooklm.google.com/notebook/78f6e331-b64e-4e33-bdec-13a8240caeb9' : '#'} target="_blank" rel="noopener noreferrer" className={`px-2.5 py-1 rounded-md border ${year.id === 1 ? 'bg-orange-100 border-orange-200 text-orange-600' : 'bg-white dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 text-neutral-400 cursor-not-allowed'}`}>Podcast</a>
+                      <a href={year.id === 1 ? 'https://notebooklm.google.com/notebook/78f6e331-b64e-4e33-bdec-13a8240caeb9' : '#'} target="_blank" rel="noopener noreferrer" className={`px-2.5 py-1 rounded-md border ${year.id === 1 ? 'bg-blue-100 border-blue-200 text-blue-600' : 'bg-white dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 text-neutral-400 cursor-not-allowed'}`}>Kvíz</a>
+                      <a href={year.id === 1 ? 'https://notebooklm.google.com/notebook/78f6e331-b64e-4e33-bdec-13a8240caeb9' : '#'} target="_blank" rel="noopener noreferrer" className={`px-2.5 py-1 rounded-md border ${year.id === 1 ? 'bg-emerald-100 border-emerald-200 text-emerald-600' : 'bg-white dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 text-neutral-400 cursor-not-allowed'}`}>Flashcards</a>
+                    </div>
+                  </div>
+                )}
               </div>
             </section>
           );
         })}
+
+        {/* Final Review for Technologie */}
+        {subject.id === 'technologie' && (
+          <section className="pt-10 border-t border-neutral-200 dark:border-neutral-800">
+            <div className="editorial-card p-10 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 text-center space-y-6">
+              <h2 className="font-serif text-4xl font-bold">Závěrečné opakováni</h2>
+              <p className="text-neutral-400 dark:text-neutral-500 max-w-xl mx-auto text-lg">
+                Ucelený přehled úplně všeho od 1. do 3. ročníku. Ideální příprava těsně před zkouškou.
+              </p>
+              <div className="flex flex-wrap justify-center items-center gap-4 pt-4">
+                <a href="https://notebooklm.google.com/notebook/78f6e331-b64e-4e33-bdec-13a8240caeb9" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-accent text-white rounded-xl font-bold text-sm uppercase tracking-widest hover:scale-105 transition-all">Souhrnný Podcast</a>
+                <a href="https://notebooklm.google.com/notebook/78f6e331-b64e-4e33-bdec-13a8240caeb9" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-accent text-white rounded-xl font-bold text-sm uppercase tracking-widest hover:scale-105 transition-all">Velký Kvíz</a>
+                <a href="https://notebooklm.google.com/notebook/78f6e331-b64e-4e33-bdec-13a8240caeb9" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-accent text-white rounded-xl font-bold text-sm uppercase tracking-widest hover:scale-105 transition-all">Všechny Kartičky</a>
+              </div>
+            </div>
+          </section>
+        )}
 
         {subject.years.every(y => y.topics.length === 0) && (
           <div className="editorial-card p-12 text-center border-dashed">
