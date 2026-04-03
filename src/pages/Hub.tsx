@@ -27,7 +27,7 @@ export const Hub: React.FC = () => {
           to="/subjects" 
           className="editorial-card p-10 flex flex-col justify-between aspect-square md:aspect-auto md:min-h-[320px] group hover:border-accent dark:hover:border-accent hover:shadow-2xl transition-all duration-500 bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800"
         >
-          <div className="w-14 h-14 bg-neutral-100 dark:bg-neutral-800 rounded-2xl flex items-center justify-center text-neutral-900 dark:text-white group-hover:bg-accent group-hover:text-white transition-colors duration-500">
+          <div className="w-14 h-14 bg-neutral-100 dark:bg-neutral-800 rounded-2xl flex items-center justify-center text-neutral-900 dark:text-white group-hover:bg-accent group-hover:text-white transition-colors duration-500 shadow-sm">
             <BookOpen className="w-7 h-7" />
           </div>
           <div>
@@ -48,20 +48,20 @@ export const Hub: React.FC = () => {
           href="http://polygrafie.lukymas.eu.org/" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="editorial-card p-10 flex flex-col justify-between aspect-square md:aspect-auto md:min-h-[320px] group hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-2xl transition-all duration-500 bg-neutral-900 dark:bg-neutral-50 border-neutral-800 dark:border-neutral-200"
+          className="editorial-card p-10 flex flex-col justify-between aspect-square md:aspect-auto md:min-h-[320px] group hover:border-accent dark:hover:border-accent hover:shadow-2xl transition-all duration-500 bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800"
         >
-          <div className="w-14 h-14 bg-neutral-800 dark:bg-neutral-200 rounded-2xl flex items-center justify-center text-neutral-200 dark:text-neutral-800 group-hover:bg-white group-hover:text-black dark:group-hover:bg-black dark:group-hover:text-white transition-colors duration-500">
+          <div className="w-14 h-14 bg-neutral-100 dark:bg-neutral-800 rounded-2xl flex items-center justify-center text-neutral-900 dark:text-white group-hover:bg-accent group-hover:text-white transition-colors duration-500 shadow-sm">
             <PenTool className="w-7 h-7" />
           </div>
           <div>
-            <h2 className="font-serif text-4xl font-bold text-white dark:text-neutral-900 mb-4">
+            <h2 className="font-serif text-4xl font-bold text-neutral-900 dark:text-white mb-4">
               Nástroje
             </h2>
-            <p className="text-neutral-400 dark:text-neutral-500 text-base leading-relaxed">
+            <p className="text-neutral-500 dark:text-neutral-400 text-base leading-relaxed">
               Externí aplikace s kalkulačkami a polygrafickými utility pro každodenní praxi.
             </p>
           </div>
-          <div className="mt-8 flex items-center gap-2 font-bold text-neutral-400 dark:text-neutral-500 group-hover:text-white dark:group-hover:text-neutral-900 transition-colors uppercase tracking-widest text-[10px]">
+          <div className="mt-8 flex items-center gap-2 font-bold text-accent uppercase tracking-widest text-[10px]">
             Otevřít aplikaci <ExternalLink className="w-4 h-4" />
           </div>
         </a>
