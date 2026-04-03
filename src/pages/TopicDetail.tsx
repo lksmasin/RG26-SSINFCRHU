@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ChevronLeft, Info, AlertCircle, CheckCircle, XCircle, FileText, Headphones, BrainCircuit, ExternalLink, CheckSquare, Layers } from 'lucide-react';
+import { ChevronLeft, Info, AlertCircle, CheckCircle, XCircle, FileText, Headphones, BrainCircuit, CheckSquare, Layers, Video, MonitorPlay } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import type { Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -9,18 +9,12 @@ import { AudioPlayer } from '../components/AudioPlayer';
 
 export const TopicDetail: React.FC = () => {
   const { subjectId, topicId } = useParams<{ subjectId: string; topicId: string }>();
-  const [activeSidebarTab, setActiveSidebarTab] = useState<'podcast' | 'quiz' | 'flashcards'>('podcast');
 
   const subject = subjects.find((s) => s.id === subjectId);
   const topic = subject?.years.flatMap((y) => y.topics).find((t) => t.id === topicId);
 
   if (!subject || !topic) {
     return <div className="p-12 text-center text-neutral-500 font-serif italic">Téma nenalezeno.</div>;
-  }
-
-  // Ensure default tab is valid
-  if (activeSidebarTab === 'podcast' && !topic.audioUrl) {
-    setActiveSidebarTab('quiz');
   }
 
   const sanitizeContent = (content: string) => {
@@ -80,24 +74,15 @@ export const TopicDetail: React.FC = () => {
   const hasAudio = isValidUrl(topic.audioUrl);
   const hasQuiz = isValidUrl(topic.quizUrl) || isValidUrl(topic.quizEasyUrl) || isValidUrl(topic.quizHardUrl);
   const hasFlashcards = isValidUrl(topic.flashcardsUrl);
+  const hasVideo = isValidUrl(topic.videoUrl);
+  const hasPresentation = isValidUrl(topic.presentationUrl);
 
-  const hasTools = hasAudio || hasQuiz || hasFlashcards;
-
-  // Automatically select the first available tool for the sidebar
-  if (
-    (activeSidebarTab === 'podcast' && !hasAudio) ||
-    (activeSidebarTab === 'quiz' && !hasQuiz) ||
-    (activeSidebarTab === 'flashcards' && !hasFlashcards)
-  ) {
-    if (hasAudio) setActiveSidebarTab('podcast');
-    else if (hasQuiz) setActiveSidebarTab('quiz');
-    else if (hasFlashcards) setActiveSidebarTab('flashcards');
-  }
+  const hasTools = hasAudio || hasQuiz || hasFlashcards || hasVideo || hasPresentation;
 
   return (
     <div className="w-full max-w-7xl mx-auto pb-20">
       
-      {/* Header and Back Link (Always on top) */}
+      {/* Header and Back Link */}
       <div className="mb-10 lg:mb-14">
         <Link 
           to={`/subjects/${subject.id}`} 
@@ -128,113 +113,115 @@ export const TopicDetail: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Column: Interactive Sidebar (Sticky) */}
+        {/* Right Column: Stacked Tools */}
         {hasTools && (
           <aside className="w-full xl:w-[35%]">
-            <div className="xl:sticky xl:top-24 editorial-card bg-neutral-100/50 dark:bg-neutral-900/50 p-6 sm:p-8 border-none ring-1 ring-neutral-200 dark:ring-neutral-800 flex flex-col gap-6">
-            
-            <div className="flex gap-2 mb-2 border-b border-neutral-200 dark:border-neutral-800 pb-4 overflow-x-auto no-scrollbar">
+            <div className="xl:sticky xl:top-24 flex flex-col gap-8">
+              
+              {/* AI Podcast Section */}
               {hasAudio && (
-                <button
-                  onClick={() => setActiveSidebarTab('podcast')}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeSidebarTab === 'podcast' ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'text-neutral-500 hover:bg-neutral-200 dark:hover:bg-neutral-800'}`}
-                >
-                  <Headphones className="w-4 h-4" /> AI Podcast
-                </button>
-              )}
-              {hasQuiz && (
-                <button
-                  onClick={() => setActiveSidebarTab('quiz')}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeSidebarTab === 'quiz' ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'text-neutral-500 hover:bg-neutral-200 dark:hover:bg-neutral-800'}`}
-                >
-                  <CheckSquare className="w-4 h-4" /> Kvíz
-                </button>
-              )}
-              {hasFlashcards && (
-                <button
-                  onClick={() => setActiveSidebarTab('flashcards')}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeSidebarTab === 'flashcards' ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'text-neutral-500 hover:bg-neutral-200 dark:hover:bg-neutral-800'}`}
-                >
-                  <Layers className="w-4 h-4" /> Flashcards
-                </button>
-              )}
-            </div>
-
-            <div className="w-full">
-              {activeSidebarTab === 'podcast' && hasAudio && (
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col gap-2">
-                    <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">Poslechněte si výklad</h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400">Přehrajte si AI vygenerovaný podcast, který shrnuje to nejdůležitější z tohoto tématu.</p>
+                <div className="editorial-card bg-neutral-100/50 dark:bg-neutral-900/50 p-6 sm:p-8 border-none ring-1 ring-neutral-200 dark:ring-neutral-800 flex flex-col gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-xl flex items-center justify-center shrink-0">
+                      <Headphones className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-neutral-900 dark:text-white">AI Podcast</h3>
+                      <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest">Poslech k tématu</p>
+                    </div>
                   </div>
                   <AudioPlayer src={topic.audioUrl!} title={topic.title} />
                 </div>
               )}
 
-              {activeSidebarTab === 'quiz' && hasQuiz && (
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col gap-2">
-                    <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">Ověřte své znalosti</h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                      Otestujte své znalosti z tohoto tématu pomocí inteligentních kvízů v aplikaci Google NotebookLM.
-                    </p>
-                  </div>
-                  
-                  {isValidUrl(topic.quizEasyUrl) && isValidUrl(topic.quizHardUrl) ? (
-                    <div className="flex flex-col gap-3 mt-2">
-                      <a 
-                        href={topic.quizEasyUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md"
-                      >
-                        <BrainCircuit className="w-5 h-5" /> Kvíz Klasický (Lehký) <ExternalLink className="w-4 h-4 ml-1 opacity-70" />
-                      </a>
-                      <a 
-                        href={topic.quizHardUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 w-full py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md"
-                      >
-                        <BrainCircuit className="w-5 h-5" /> Kvíz Těžký <ExternalLink className="w-4 h-4 ml-1 opacity-70" />
-                      </a>
+              {/* Quiz Section */}
+              {hasQuiz && (
+                <div className="editorial-card bg-neutral-100/50 dark:bg-neutral-900/50 p-6 sm:p-8 border-none ring-1 ring-neutral-200 dark:ring-neutral-800 flex flex-col gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-xl flex items-center justify-center shrink-0">
+                      <CheckSquare className="w-5 h-5" />
                     </div>
-                  ) : (
-                    <a 
-                      href={topic.quizUrl || topic.quizEasyUrl || topic.quizHardUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 flex items-center justify-center gap-2 w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md"
-                    >
-                      <BrainCircuit className="w-5 h-5" /> Spustit Kvíz v NotebookLM <ExternalLink className="w-4 h-4 ml-1 opacity-70" />
-                    </a>
-                  )}
+                    <div>
+                      <h3 className="font-bold text-neutral-900 dark:text-white">Kvízy</h3>
+                      <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest">Ověření znalostí</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2 mt-2">
+                    {isValidUrl(topic.quizEasyUrl) && isValidUrl(topic.quizHardUrl) ? (
+                      <>
+                        <a href={topic.quizEasyUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl transition-all shadow-md">
+                          <BrainCircuit className="w-4 h-4" /> Kvíz Klasický (Lehký)
+                        </a>
+                        <a href={topic.quizHardUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-xl transition-all shadow-md">
+                          <BrainCircuit className="w-4 h-4" /> Kvíz Těžký
+                        </a>
+                      </>
+                    ) : (
+                      <a href={topic.quizUrl || topic.quizEasyUrl || topic.quizHardUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl transition-all shadow-md">
+                        <BrainCircuit className="w-4 h-4" /> Spustit Kvíz v NotebookLM
+                      </a>
+                    )}
+                  </div>
                 </div>
               )}
 
-              {activeSidebarTab === 'flashcards' && hasFlashcards && (
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col gap-2">
-                    <h3 className="font-serif text-2xl font-bold text-neutral-900 dark:text-white">Opakování pojmů</h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                      Naučte se klíčové pojmy efektivně. Otevřete si sadu interaktivních kartiček (Flashcards) v Google NotebookLM.
-                    </p>
+              {/* Flashcards Section */}
+              {hasFlashcards && (
+                <div className="editorial-card bg-neutral-100/50 dark:bg-neutral-900/50 p-6 sm:p-8 border-none ring-1 ring-neutral-200 dark:ring-neutral-800 flex flex-col gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-xl flex items-center justify-center shrink-0">
+                      <Layers className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-neutral-900 dark:text-white">Flashcards</h3>
+                      <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest">Opakování pojmů</p>
+                    </div>
                   </div>
-                  <a 
-                    href={topic.flashcardsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 flex items-center justify-center gap-2 w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md"
-                  >
-                    <BrainCircuit className="w-5 h-5" /> Otevřít Flashcards v NotebookLM <ExternalLink className="w-4 h-4 ml-1 opacity-70" />
+                  <a href={topic.flashcardsUrl} target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center justify-center gap-2 w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-all shadow-md">
+                    <BrainCircuit className="w-4 h-4" /> Otevřít Kartičky v NotebookLM
                   </a>
                 </div>
               )}
-            </div>
 
-          </div>
-        </aside>
-      )}
+              {/* Video Section */}
+              {hasVideo && (
+                <div className="editorial-card bg-neutral-100/50 dark:bg-neutral-900/50 p-6 sm:p-8 border-none ring-1 ring-neutral-200 dark:ring-neutral-800 flex flex-col gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 rounded-xl flex items-center justify-center shrink-0">
+                      <Video className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-neutral-900 dark:text-white">Video výklad</h3>
+                      <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest">Shrnutí tématu</p>
+                    </div>
+                  </div>
+                  <a href={topic.videoUrl} target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center justify-center gap-2 w-full py-3 bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold rounded-xl transition-all shadow-md">
+                    <Video className="w-4 h-4" /> Pustit Video v NotebookLM
+                  </a>
+                </div>
+              )}
+
+              {/* Presentation Section */}
+              {hasPresentation && (
+                <div className="editorial-card bg-neutral-100/50 dark:bg-neutral-900/50 p-6 sm:p-8 border-none ring-1 ring-neutral-200 dark:ring-neutral-800 flex flex-col gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-xl flex items-center justify-center shrink-0">
+                      <MonitorPlay className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-neutral-900 dark:text-white">Prezentace</h3>
+                      <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest">Studijní materiály</p>
+                    </div>
+                  </div>
+                  <a href={topic.presentationUrl} target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center justify-center gap-2 w-full py-3 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold rounded-xl transition-all shadow-md">
+                    <MonitorPlay className="w-4 h-4" /> Otevřít Prezentaci v NotebookLM
+                  </a>
+                </div>
+              )}
+
+            </div>
+          </aside>
+        )}
 
       </div>
     </div>

@@ -9,6 +9,8 @@ export interface Topic {
   quizEasyUrl?: string;
   quizHardUrl?: string;
   flashcardsUrl?: string;
+  videoUrl?: string;
+  presentationUrl?: string;
 }
 
 export interface Year {
