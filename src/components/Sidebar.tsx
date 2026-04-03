@@ -1,14 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BookOpen, Home, Sun, Moon, PenTool } from 'lucide-react';
+import { BookOpen, Home, Sun, Moon, PenTool, Info } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 export const Sidebar: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
   const links = [
-    { to: '/', icon: Home, label: 'Přehled' },
+    { to: '/', icon: Home, label: 'Domů' },
     { to: '/subjects', icon: BookOpen, label: 'Předměty' },
+    { to: '/about', icon: Info, label: 'Info' },
   ];
 
   return (
@@ -22,8 +23,8 @@ export const Sidebar: React.FC = () => {
             R
           </div>
           <div>
-            <h1 className="font-serif font-bold text-lg leading-tight">Reprodukční<br/>grafik 2026</h1>
-            <p className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold mt-1">Studijní Hub</p>
+            <h1 className="font-serif font-bold text-lg leading-tight text-neutral-900 dark:text-white">RG Hub<br/>2026</h1>
+            <p className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold mt-1">SŠ INFCR Humpolec</p>
           </div>
         </div>
 
@@ -34,14 +35,14 @@ export const Sidebar: React.FC = () => {
               key={link.to}
               to={link.to}
               className={({ isActive }) => `
-                flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-1 lg:gap-3 p-2 lg:p-3 lg:px-4 rounded-xl font-medium transition-all w-20 sm:w-24 lg:w-auto
+                flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-1 lg:gap-3 p-2 lg:p-3 lg:px-4 rounded-xl font-medium transition-all w-16 sm:w-20 lg:w-auto
                 ${isActive 
                   ? 'text-accent lg:bg-neutral-100 lg:dark:bg-neutral-900 lg:text-neutral-900 lg:dark:text-white' 
                   : 'text-neutral-500 hover:text-neutral-900 dark:hover:text-white lg:hover:bg-neutral-50 lg:dark:hover:bg-neutral-900/50'}
               `}
             >
               <link.icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5 shrink-0" />
-              <span className="text-[10px] sm:text-xs lg:text-base lg:block font-bold lg:font-medium">{link.label}</span>
+              <span className="text-[10px] sm:text-[11px] lg:text-base lg:block font-bold lg:font-medium">{link.label}</span>
             </NavLink>
           ))}
 
@@ -51,11 +52,11 @@ export const Sidebar: React.FC = () => {
             href="http://polygrafie.lukymas.eu.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-1 lg:gap-3 p-2 lg:p-3 lg:px-4 rounded-xl font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white lg:hover:bg-neutral-50 lg:dark:hover:bg-neutral-900/50 transition-all group w-20 sm:w-24 lg:w-auto"
+            className="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-1 lg:gap-3 p-2 lg:p-3 lg:px-4 rounded-xl font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white lg:hover:bg-neutral-50 lg:dark:hover:bg-neutral-900/50 transition-all group w-16 sm:w-20 lg:w-auto"
             title="Polygrafické nástroje"
           >
             <PenTool className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5 shrink-0 group-hover:rotate-12 transition-transform" />
-            <span className="text-[10px] sm:text-xs lg:text-base lg:block font-bold lg:font-medium text-center leading-tight">Nástroje</span>
+            <span className="text-[10px] sm:text-[11px] lg:text-base lg:block font-bold lg:font-medium text-center leading-tight">Nástroje</span>
           </a>
         </nav>
 

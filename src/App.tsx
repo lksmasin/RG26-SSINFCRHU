@@ -7,6 +7,8 @@ import { Subjects } from './pages/Subjects';
 import { SubjectDetail } from './pages/SubjectDetail';
 import { TopicDetail } from './pages/TopicDetail';
 
+import { About } from './pages/About';
+
 const App: React.FC = () => {
   return (
     <ThemeProvider>
@@ -21,11 +23,12 @@ const App: React.FC = () => {
                   <Route path="/subjects" element={<Subjects />} />
                   <Route path="/subjects/:subjectId" element={<SubjectDetail />} />
                   <Route path="/subjects/:subjectId/topics/:topicId" element={<TopicDetail />} />
+                  <Route path="/about" element={<About />} />
                 </Routes>
               </div>
               <footer className="mt-20 py-6 border-t border-neutral-200 dark:border-neutral-800 text-center">
                 <p className="text-[10px] md:text-xs uppercase tracking-widest text-neutral-400 font-semibold">
-                  © {new Date().getFullYear()} SŠ INFCR Humpolec • Reprodukční grafik
+                  © 2026 lukymas_ • SŠ INFCR Humpolec
                 </p>
               </footer>
             </div>
