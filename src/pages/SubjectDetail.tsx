@@ -39,7 +39,13 @@ export const SubjectDetail: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pl-0">
-                {year.topics.map((topic) => (
+                {year.topics.map((topic) => {
+                  const isValidUrl = (url?: string) => !!url && url.trim() !== '' && !url.startsWith('PLACEHOLDER');
+                  const hasAudio = isValidUrl(topic.audioUrl);
+                  const hasQuiz = isValidUrl(topic.quizUrl) || isValidUrl(topic.quizEasyUrl) || isValidUrl(topic.quizHardUrl);
+                  const hasFlashcards = isValidUrl(topic.flashcardsUrl);
+
+                  return (
                   <Link
                     key={topic.id}
                     to={`/subjects/${subject.id}/topics/${topic.id}`}
@@ -51,12 +57,14 @@ export const SubjectDetail: React.FC = () => {
                     <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm md:text-base">
                       {topic.description}
                     </p>
-                    <div className="mt-8 flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-neutral-400">
-                      {topic.audioUrl && <span className="text-orange-500">Podcast</span>}
-                      {topic.notebookLmUrl && <span className="text-blue-500">NotebookLM</span>}
+                    <div className="mt-8 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-widest">
+                      {hasAudio && <span className="px-2.5 py-1 rounded-md bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">Podcast</span>}
+                      {hasQuiz && <span className="px-2.5 py-1 rounded-md bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Kvíz</span>}
+                      {hasFlashcards && <span className="px-2.5 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">Flashcards</span>}
                     </div>
                   </Link>
-                ))}
+                  );
+                })}
               </div>
             </section>
           );
